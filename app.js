@@ -1,26 +1,20 @@
-// strings 
-console.log('Hello, world');
+// template strings 
+const title = 'Best reads of 2019';
+const author = 'Mario';
+const likes = 30;
 
-let email = 'mario@thenetninja.co.uk';
-console.log(email);
+// concatention way
+// let result = 'The blog called' + title + 'by' + author + 'has' + likes + 'likes';
+console.log(result);
+// template string way 
+let result = `The blog called ${title} by ${likes} likes`;
+console.log(result);
 
-// string concatentation
-let firstName = 'Moe';
-let lastName = 'Almossa';
+// creating html templates
+let html = `
 
-let fullName = firstName + '' + lastName;
-console.log(fullName);
-
-// getting characters 
-console.log(fullName[0]);
-
-// string length 
-console.log(fullName.length);
-
-// string methods
-console.log(fullName.toLocaleUpperCase());
-let result = fullName.toLocaleLowerCase();
-console.log(result, fullName);
-
-let index = email.indexOf("@");
-console.log(index);
+<h2>${title}</h2>
+<p>${author}</p>
+<span>This blog has ${likes} likes</span>
+`;
+console.log(html);
